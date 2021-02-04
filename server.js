@@ -1,13 +1,19 @@
 const express = require('express')
-
+const connectDb = require('./config/db')
 const app = express()
+
+connectDb()
 
 app.get('/', (req, res) => {
   res.send('API Running')
 })
 
-// looking for evironment variable named port. Mongodb will go to the environment variables to check for it.
-// but if we are running localy we will use port 5000
+// Define Routes
+app.use('/api/users', require('./routes/api/users'))
+app.use('/api/posts', require('./routes/api/posts'))
+app.use('/api/profile', require('./routes/api/profile'))
+app.use('/api/auth', require('./routes/api/auth'))
+
 const PORT = process.env.PORT || 5000
 
 app.listen(PORT, () => {
