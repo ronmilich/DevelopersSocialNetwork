@@ -1,3 +1,6 @@
 {
-    "mongoURI": "mongodb+srv://ronmilich:roniK123@devconnector.qzitd.mongodb.net/test?retryWrites=true&w=majority"
+    "mongoURI": "mongodb+srv://ronmilich:roniK123@devconnector.qzitd.mongodb.net/test?retryWrites=true&w=majority",
+    "jwtSecret": "theMostSecureTokenSecretRON",
+    "githubClientId": "196343c30ea8f87701e8",
+    "githubSecret": "f868e87fc4be44542572272bcbc4e9f8449b32e1"
 }
